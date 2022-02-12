@@ -1,4 +1,4 @@
-name: choose_color_theme_template
+name: untitled
 description: This template will help you choose a color scheme for the application, show how widgets interact with it
 
 version: 1.0.0+1
@@ -17,3 +17,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+

@@ -80,8 +80,8 @@ class _ViewPage1State extends State<ViewPage1> {
               ),
               const SizedBox(height: 16),
               ElevatedButton(
-                onPressed: () =>
-                    Navigator.of(context).pushNamed(ViewPage2.routeName),
+                onPressed: () => Navigator.of(context)
+                    .pushReplacementNamed(ViewPage2.routeName),
                 child: const Text('Далее'),
                 style: ButtonStyle(
                     padding: MaterialStateProperty.all(

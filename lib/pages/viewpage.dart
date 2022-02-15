@@ -19,8 +19,8 @@ class ViewPage extends StatelessWidget {
                   color: Theme.of(context).colorScheme.primary,
                   height: 200),
               ElevatedButton(
-                onPressed: () =>
-                    Navigator.of(context).pushNamed(ViewPage1.routeName),
+                onPressed: () => Navigator.of(context)
+                    .pushReplacementNamed(ViewPage1.routeName),
                 child: const Text('Продолжить'),
                 style: ButtonStyle(
                     padding: MaterialStateProperty.all(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/pages/homepage.dart';
+import 'package:untitled/pages/userpage.dart';
 
 class ViewPage3 extends StatefulWidget {
   const ViewPage3({Key? key}) : super(key: key);
@@ -79,7 +79,7 @@ class _ViewPage3State extends State<ViewPage3> {
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () async => await Navigator.of(context)
-                    .pushReplacementNamed(ProfilePage.routeName),
+                    .pushReplacementNamed(UserPage.routeName),
                 child: const Text('Далее'),
                 style: ButtonStyle(
                     padding: MaterialStateProperty.all(

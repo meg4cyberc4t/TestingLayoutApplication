@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 mixin ThemeDataService {
   static ThemeData get themeData => mainThemeData;
 
-  static ThemeData mainThemeData = ThemeData.from(colorScheme: colorScheme);
+  static ThemeData mainThemeData =
+      ThemeData.from(colorScheme: colorScheme).copyWith(
+    appBarTheme: const AppBarTheme(
+      backgroundColor: color2,
+      foregroundColor: Colors.black,
+    ),
+  );
 
   static const color1 = Color(0xFF808080);
   static const color2 = Color(0xFFC4C4C4);

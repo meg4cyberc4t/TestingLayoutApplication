@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/pages/homepage.dart';
+import 'package:untitled/pages/create_event_page.dart';
+import 'package:untitled/pages/event_page.dart';
+import 'package:untitled/pages/notifications_page.dart';
+import 'package:untitled/pages/userpage.dart';
 import 'package:untitled/pages/viewpage.dart';
 import 'package:untitled/pages/viewpage1.dart';
 import 'package:untitled/pages/viewpage2.dart';
@@ -22,7 +25,7 @@ class MyApp extends StatelessWidget {
       onUnknownRoute: (RouteSettings routeSettings) {
         return MaterialPageRoute(
           settings: routeSettings,
-          builder: (BuildContext context) => const ProfilePage(),
+          builder: (BuildContext context) => const NotificationsPage(),
         );
       },
       onGenerateRoute: (RouteSettings routeSettings) {
@@ -47,10 +50,25 @@ class MyApp extends StatelessWidget {
               settings: routeSettings,
               builder: (BuildContext context) => const ViewPage3(),
             );
-          case ProfilePage.routeName:
+          case NotificationsPage.routeName:
             return MaterialPageRoute(
               settings: routeSettings,
-              builder: (BuildContext context) => const ProfilePage(),
+              builder: (BuildContext context) => const NotificationsPage(),
+            );
+          case UserPage.routeName:
+            return MaterialPageRoute(
+              settings: routeSettings,
+              builder: (BuildContext context) => const UserPage(),
+            );
+          case EventPage.routeName:
+            return MaterialPageRoute(
+              settings: routeSettings,
+              builder: (BuildContext context) => const EventPage(),
+            );
+          case CreateEventPage.routeName:
+            return MaterialPageRoute(
+              settings: routeSettings,
+              builder: (BuildContext context) => const CreateEventPage(),
             );
         }
         return null;
